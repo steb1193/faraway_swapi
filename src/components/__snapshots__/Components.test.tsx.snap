@@ -1,0 +1,384 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Components renders CharacterCard disabled unchanged 1`] = `
+<div>
+  <span
+    class="MuiSkeleton-root MuiSkeleton-rectangular MuiSkeleton-pulse css-58ftfq-MuiSkeleton-root"
+    style="width: 210px; height: 118px;"
+  />
+  <div
+    class="MuiBox-root css-37urdo"
+  >
+    <span
+      class="MuiSkeleton-root MuiSkeleton-text MuiSkeleton-pulse css-1n7gpw1-MuiSkeleton-root"
+    />
+    <br />
+    <span
+      class="MuiSkeleton-root MuiSkeleton-text MuiSkeleton-pulse css-1n7gpw1-MuiSkeleton-root"
+      style="width: 50%;"
+    />
+    <span
+      class="MuiSkeleton-root MuiSkeleton-text MuiSkeleton-pulse css-1n7gpw1-MuiSkeleton-root"
+      style="width: 40%;"
+    />
+    <span
+      class="MuiSkeleton-root MuiSkeleton-text MuiSkeleton-pulse css-1n7gpw1-MuiSkeleton-root"
+      style="width: 70%;"
+    />
+    <span
+      class="MuiSkeleton-root MuiSkeleton-text MuiSkeleton-pulse css-1n7gpw1-MuiSkeleton-root"
+      style="width: 70%;"
+    />
+    <span
+      class="MuiSkeleton-root MuiSkeleton-text MuiSkeleton-pulse css-1n7gpw1-MuiSkeleton-root"
+      style="width: 60%;"
+    />
+    <span
+      class="MuiSkeleton-root MuiSkeleton-text MuiSkeleton-pulse css-1n7gpw1-MuiSkeleton-root"
+      style="width: 40%;"
+    />
+  </div>
+</div>
+`;
+
+exports[`Components renders CharacterCard enabled unchanged 1`] = `
+<div>
+  <div
+    class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root css-1ri6ub7-MuiPaper-root-MuiCard-root"
+  >
+    <button
+      class="MuiButtonBase-root MuiCardActionArea-root css-1oitmrd-MuiButtonBase-root-MuiCardActionArea-root"
+      tabindex="0"
+      type="button"
+    >
+      <div
+        class="MuiBox-root css-ns1dge"
+      />
+      <div
+        class="MuiCardContent-root css-46bh2p-MuiCardContent-root"
+      >
+        <div
+          class="MuiTypography-root MuiTypography-h6 MuiTypography-gutterBottom css-18k87ye-MuiTypography-root"
+        >
+          Luke Skywalker
+        </div>
+        <p
+          class="MuiTypography-root MuiTypography-body2 css-r40f8v-MuiTypography-root"
+        >
+          height: 
+          172
+          ;
+          <br />
+          mass: 
+          77
+          ;
+          <br />
+          hair color: 
+          blond
+          ;
+          <br />
+          skin color: 
+          fair
+          ;
+          <br />
+          eye color: 
+          blue
+          ;
+          <br />
+          birth year: 
+          19BBY
+          ;
+          <br />
+          gender: 
+          male
+          ;
+        </p>
+      </div>
+      <div
+        class="MuiCardActions-root MuiCardActions-spacing css-1t6e9jv-MuiCardActions-root"
+      >
+        <div
+          class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeSmall MuiButton-textSizeSmall MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeSmall MuiButton-textSizeSmall css-1knaqv7-MuiButtonBase-root-MuiButton-root"
+          role="button"
+          tabindex="0"
+        >
+          Share
+          <span
+            class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+          />
+        </div>
+      </div>
+      <span
+        class="MuiCardActionArea-focusHighlight css-1v2exvi-MuiCardActionArea-focusHighlight"
+      />
+      <span
+        class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+      />
+    </button>
+  </div>
+</div>
+`;
+
+exports[`Components renders CharacterCardEdit unchanged 1`] = `
+<div>
+  <div
+    class="MuiBox-root css-gbtijt"
+  >
+    <div
+      class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root css-1syf4pq-MuiPaper-root-MuiCard-root"
+    >
+      <div
+        class="MuiBox-root css-ns1dge"
+      />
+      <div
+        class="MuiCardContent-root css-46bh2p-MuiCardContent-root"
+      >
+        <div
+          class="MuiTypography-root MuiTypography-h6 MuiTypography-gutterBottom css-18k87ye-MuiTypography-root"
+        >
+          Luke Skywalker
+        </div>
+        <div
+          class="MuiFormControl-root MuiFormControl-marginDense MuiFormControl-fullWidth MuiTextField-root css-1z10yd4-MuiFormControl-root-MuiTextField-root"
+        >
+          <label
+            class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-standard MuiFormLabel-colorPrimary MuiFormLabel-filled MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-standard css-1c2i806-MuiFormLabel-root-MuiInputLabel-root"
+            data-shrink="true"
+            for=":r0:"
+            id=":r0:-label"
+          >
+            height
+          </label>
+          <div
+            class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-l4u8b9-MuiInputBase-root-MuiInput-root"
+          >
+            <input
+              aria-invalid="false"
+              class="MuiInputBase-input MuiInput-input css-1x51dt5-MuiInputBase-input-MuiInput-input"
+              id=":r0:"
+              type="text"
+              value="172"
+            />
+          </div>
+        </div>
+        <div
+          class="MuiFormControl-root MuiFormControl-marginDense MuiFormControl-fullWidth MuiTextField-root css-1z10yd4-MuiFormControl-root-MuiTextField-root"
+        >
+          <label
+            class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-standard MuiFormLabel-colorPrimary MuiFormLabel-filled MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-standard css-1c2i806-MuiFormLabel-root-MuiInputLabel-root"
+            data-shrink="true"
+            for=":r1:"
+            id=":r1:-label"
+          >
+            mass
+          </label>
+          <div
+            class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-l4u8b9-MuiInputBase-root-MuiInput-root"
+          >
+            <input
+              aria-invalid="false"
+              class="MuiInputBase-input MuiInput-input css-1x51dt5-MuiInputBase-input-MuiInput-input"
+              id=":r1:"
+              type="text"
+              value="77"
+            />
+          </div>
+        </div>
+        <div
+          class="MuiFormControl-root MuiFormControl-marginDense MuiFormControl-fullWidth MuiTextField-root css-1z10yd4-MuiFormControl-root-MuiTextField-root"
+        >
+          <label
+            class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-standard MuiFormLabel-colorPrimary MuiFormLabel-filled MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-standard css-1c2i806-MuiFormLabel-root-MuiInputLabel-root"
+            data-shrink="true"
+            for=":r2:"
+            id=":r2:-label"
+          >
+            hair color
+          </label>
+          <div
+            class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-l4u8b9-MuiInputBase-root-MuiInput-root"
+          >
+            <input
+              aria-invalid="false"
+              class="MuiInputBase-input MuiInput-input css-1x51dt5-MuiInputBase-input-MuiInput-input"
+              id=":r2:"
+              type="text"
+              value="blond"
+            />
+          </div>
+        </div>
+        <div
+          class="MuiFormControl-root MuiFormControl-marginDense MuiFormControl-fullWidth MuiTextField-root css-1z10yd4-MuiFormControl-root-MuiTextField-root"
+        >
+          <label
+            class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-standard MuiFormLabel-colorPrimary MuiFormLabel-filled MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-standard css-1c2i806-MuiFormLabel-root-MuiInputLabel-root"
+            data-shrink="true"
+            for=":r3:"
+            id=":r3:-label"
+          >
+            skin color
+          </label>
+          <div
+            class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-l4u8b9-MuiInputBase-root-MuiInput-root"
+          >
+            <input
+              aria-invalid="false"
+              class="MuiInputBase-input MuiInput-input css-1x51dt5-MuiInputBase-input-MuiInput-input"
+              id=":r3:"
+              type="text"
+              value="fair"
+            />
+          </div>
+        </div>
+        <div
+          class="MuiFormControl-root MuiFormControl-marginDense MuiFormControl-fullWidth MuiTextField-root css-1z10yd4-MuiFormControl-root-MuiTextField-root"
+        >
+          <label
+            class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-standard MuiFormLabel-colorPrimary MuiFormLabel-filled MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-standard css-1c2i806-MuiFormLabel-root-MuiInputLabel-root"
+            data-shrink="true"
+            for=":r4:"
+            id=":r4:-label"
+          >
+            eye color
+          </label>
+          <div
+            class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-l4u8b9-MuiInputBase-root-MuiInput-root"
+          >
+            <input
+              aria-invalid="false"
+              class="MuiInputBase-input MuiInput-input css-1x51dt5-MuiInputBase-input-MuiInput-input"
+              id=":r4:"
+              type="text"
+              value="blue"
+            />
+          </div>
+        </div>
+        <div
+          class="MuiFormControl-root MuiFormControl-marginDense MuiFormControl-fullWidth MuiTextField-root css-1z10yd4-MuiFormControl-root-MuiTextField-root"
+        >
+          <label
+            class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-standard MuiFormLabel-colorPrimary MuiFormLabel-filled MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-standard css-1c2i806-MuiFormLabel-root-MuiInputLabel-root"
+            data-shrink="true"
+            for=":r5:"
+            id=":r5:-label"
+          >
+            birth year
+          </label>
+          <div
+            class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-l4u8b9-MuiInputBase-root-MuiInput-root"
+          >
+            <input
+              aria-invalid="false"
+              class="MuiInputBase-input MuiInput-input css-1x51dt5-MuiInputBase-input-MuiInput-input"
+              id=":r5:"
+              type="text"
+              value="19BBY"
+            />
+          </div>
+        </div>
+        <div
+          class="MuiFormControl-root MuiFormControl-marginDense MuiFormControl-fullWidth MuiTextField-root css-1z10yd4-MuiFormControl-root-MuiTextField-root"
+        >
+          <label
+            class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-standard MuiFormLabel-colorPrimary MuiFormLabel-filled MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-standard css-1c2i806-MuiFormLabel-root-MuiInputLabel-root"
+            data-shrink="true"
+            for=":r6:"
+            id=":r6:-label"
+          >
+            gender
+          </label>
+          <div
+            class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-l4u8b9-MuiInputBase-root-MuiInput-root"
+          >
+            <input
+              aria-invalid="false"
+              class="MuiInputBase-input MuiInput-input css-1x51dt5-MuiInputBase-input-MuiInput-input"
+              id=":r6:"
+              type="text"
+              value="male"
+            />
+          </div>
+        </div>
+      </div>
+      <div
+        class="MuiCardActions-root MuiCardActions-spacing css-1t6e9jv-MuiCardActions-root"
+      >
+        <button
+          class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeSmall MuiButton-textSizeSmall MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeSmall MuiButton-textSizeSmall css-1knaqv7-MuiButtonBase-root-MuiButton-root"
+          tabindex="0"
+          type="button"
+        >
+          Reset
+          <span
+            class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+          />
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Components renders HomeButton unchanged 1`] = `
+<div>
+  <button
+    aria-label="open drawer"
+    class="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorInherit MuiIconButton-edgeStart MuiIconButton-sizeLarge css-ancrnh-MuiButtonBase-root-MuiIconButton-root"
+    tabindex="0"
+    type="button"
+  >
+    <svg
+      aria-hidden="true"
+      class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+      data-testid="HomeIcon"
+      focusable="false"
+      viewBox="0 0 24 24"
+    >
+      <path
+        d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"
+      />
+    </svg>
+    <span
+      class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+    />
+  </button>
+</div>
+`;
+
+exports[`Components renders Offset unchanged 1`] = `
+<div>
+  <div
+    class="css-1x551m1"
+  />
+</div>
+`;
+
+exports[`Components renders Search unchanged 1`] = `
+<div>
+  <div
+    class="css-1orzy9s"
+  />
+</div>
+`;
+
+exports[`Components renders SearchIconWrapper unchanged 1`] = `
+<div>
+  <div
+    class="css-1iz4iln"
+  />
+</div>
+`;
+
+exports[`Components renders StyledInputBase unchanged 1`] = `
+<div>
+  <div
+    class="MuiInputBase-root MuiInputBase-colorPrimary css-7mt4h1-MuiInputBase-root"
+  >
+    <input
+      class="MuiInputBase-input css-yz9k0d-MuiInputBase-input"
+      type="text"
+      value=""
+    />
+  </div>
+</div>
+`;
