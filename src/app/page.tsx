@@ -1,29 +1,27 @@
+'use client';
 import type { NextPage } from 'next';
 import { Box } from '@mui/material';
 import { CharactersList } from '@/components/CharactersList';
-import { getCharacters } from '@/api/getCharacters';
-import getQueryClient from '@/helpers/getQueryClient';
-import { Hydrate, dehydrate } from '@tanstack/react-query';
+import { Hydrate } from '@tanstack/react-query';
 import { CharacterPagination } from '@/components/CharacterPagination';
+import { useGetCharacters } from '@/hooks/useGetCharacters';
+import Loading from '@/app/loading';
+import NotFound from '@/app/not-found';
 
-const HomePage: NextPage = async ({ searchParams }) => {
-  const queryClient = getQueryClient();
-  await queryClient.prefetchQuery(
-    ['characters', { page: searchParams?.page, search: searchParams?.search }],
-    async () => {
-      const { data } = await getCharacters({
-        page: searchParams?.page,
-        search: searchParams?.search,
-      });
-      return data;
-    },
-  );
-  const dehydratedState = dehydrate(queryClient);
-
+const HomePage: NextPage<{
+  searchParams?: { page?: string; search?: string };
+}> = () => {
+  const { data, isFetching } = useGetCharacters();
+  if (!data && isFetching) {
+    return <Loading />;
+  }
+  if (!data || !data.results.length) {
+    return <NotFound />;
+  }
   return (
-    <Hydrate state={dehydratedState}>
-      <Box ma={2}>
-        <Box flexGrow={1}>
+    <Hydrate>
+      <Box m={2}>
+        <Box flexGrow={1} minHeight={'80vh'}>
           <CharactersList />
         </Box>
       </Box>

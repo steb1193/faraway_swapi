@@ -10,8 +10,8 @@ import { StyledInputBase } from '@/components/StyledInputBase';
 
 describe('Components', () => {
   beforeEach(() => {
-    global['mockAxios'].onGet('people').reply(200, mockRes);
-    global['mockAxios'].onGet(/people\/*/).reply(200, mockRes.results[0]);
+    mockAxios.onGet('people').reply(200, mockRes);
+    mockAxios.onGet(/people\/*/).reply(200, mockRes.results[0]);
   });
 
   test('renders CharacterCard enabled unchanged', () => {

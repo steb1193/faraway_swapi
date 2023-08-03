@@ -3,15 +3,14 @@ import type { FC } from 'react';
 import {
   Card,
   CardActionArea,
-  CardActions,
   CardContent,
   Typography,
-  Button,
   Box,
   Skeleton,
 } from '@mui/material';
 import { CharacterDescription } from '@/api/types';
 import { useRouter } from 'next/navigation';
+import { getIdFromUrlString } from '@/helpers/getIdFromUrlString';
 
 export type CharacterCardProps = Partial<CharacterDescription> & {
   disabled: boolean;
@@ -36,13 +35,13 @@ export const CharacterCard: FC<CharacterCardProps> = ({
     : eye_color;
   const handleClick = () => {
     if (!url) return;
-    const urlParts = url.split('/');
-    router.push(`/${urlParts[urlParts.length - 2]}`);
+    const id = getIdFromUrlString(url);
+    router.push(`/${id}`);
   };
   if (disabled) {
     return (
       <>
-        <Skeleton variant="rectangular" width={210} height={118} />
+        <Skeleton variant="rectangular" width={'100%'} height={118} />
         <Box sx={{ pt: 0.5 }}>
           <Skeleton />
           <br />
@@ -80,11 +79,6 @@ export const CharacterCard: FC<CharacterCardProps> = ({
             gender: {gender};
           </Typography>
         </CardContent>
-        <CardActions>
-          <Button size="small" color="primary" component="div">
-            Share
-          </Button>
-        </CardActions>
       </CardActionArea>
     </Card>
   );

@@ -11,6 +11,7 @@ import {
 } from '@mui/material';
 import { CharacterDescription } from '@/api/types';
 import { useState } from 'react';
+import Cookies from 'js-cookie';
 
 export type CharacterCardEdit = Partial<CharacterDescription>;
 
@@ -25,7 +26,7 @@ export const CharacterCardEdit: FC<CharacterCardEdit> = ({
   gender,
   url,
 }) => {
-  const getDefaultValue = () => ({
+  const getDefaultValue = (): Partial<CharacterDescription> => ({
     name,
     height,
     mass,
@@ -36,8 +37,8 @@ export const CharacterCardEdit: FC<CharacterCardEdit> = ({
     gender,
     url,
   });
-  const localData = localStorage.getItem(url!);
-  const [formState, setFormState] = useState(
+  const localData = Cookies.get(url!);
+  const [formState, setFormState] = useState<Partial<CharacterDescription>>(
     localData ? JSON.parse(localData) : getDefaultValue(),
   );
   const enhancedColor = (formState.eye_color || '').includes('-')
@@ -49,13 +50,13 @@ export const CharacterCardEdit: FC<CharacterCardEdit> = ({
     setFormState(getDefaultValue());
   };
   const handleEdit = (
-    e: ChangeEvent<HTMLInputElement>,
+    e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
     key: keyof CharacterCardEdit,
   ) => {
     if (!url) return;
     setFormState((prev) => {
       const newValue = { ...prev, [key]: e.target.value };
-      localStorage.setItem(url, JSON.stringify(newValue));
+      Cookies.set(url!, JSON.stringify(newValue));
       return newValue;
     });
   };

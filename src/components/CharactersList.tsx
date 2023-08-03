@@ -2,34 +2,10 @@
 import { FC } from 'react';
 import { CharacterCard } from '@/components/CharacterCard';
 import { Grid } from '@mui/material';
-import { useQuery } from '@tanstack/react-query';
-import { getCharacters } from '@/api/getCharacters';
-import { useSearchParams } from 'next/navigation';
+import { useGetCharacters } from '@/hooks/useGetCharacters';
 
 export const CharactersList: FC = () => {
-  const searchParams = useSearchParams();
-
-  const { data, isFetching } = useQuery({
-    queryKey: [
-      'characters',
-      {
-        page: searchParams.get('page'),
-        search: searchParams.get('search'),
-      },
-    ],
-    queryFn: async () => {
-      const { data } = await getCharacters({
-        page: searchParams.get('page'),
-        search: searchParams.get('search'),
-      });
-      return data;
-    },
-    keepPreviousData: true,
-    refetchOnWindowFocus: false,
-    refetchOnReconnect: false,
-    retry: false,
-    staleTime: 300000,
-  });
+  const { data, isFetching } = useGetCharacters();
 
   return (
     <Grid

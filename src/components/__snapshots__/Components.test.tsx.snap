@@ -4,7 +4,7 @@ exports[`Components renders CharacterCard disabled unchanged 1`] = `
 <div>
   <span
     class="MuiSkeleton-root MuiSkeleton-rectangular MuiSkeleton-pulse css-58ftfq-MuiSkeleton-root"
-    style="width: 210px; height: 118px;"
+    style="width: 100%; height: 118px;"
   />
   <div
     class="MuiBox-root css-37urdo"
@@ -93,20 +93,6 @@ exports[`Components renders CharacterCard enabled unchanged 1`] = `
           male
           ;
         </p>
-      </div>
-      <div
-        class="MuiCardActions-root MuiCardActions-spacing css-1t6e9jv-MuiCardActions-root"
-      >
-        <div
-          class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeSmall MuiButton-textSizeSmall MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeSmall MuiButton-textSizeSmall css-1knaqv7-MuiButtonBase-root-MuiButton-root"
-          role="button"
-          tabindex="0"
-        >
-          Share
-          <span
-            class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-          />
-        </div>
       </div>
       <span
         class="MuiCardActionArea-focusHighlight css-1v2exvi-MuiCardActionArea-focusHighlight"

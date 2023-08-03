@@ -12,8 +12,6 @@ import {
 } from 'next/navigation';
 import * as React from 'react';
 import { useDebounce } from '@/hooks/useDebounce';
-import { useQuery } from '@tanstack/react-query';
-import { getCharacters } from '@/api/getCharacters';
 
 export const SearchCharacter: FC = () => {
   const router = useRouter();
@@ -24,27 +22,7 @@ export const SearchCharacter: FC = () => {
   const [search, setSearch] = useState<string>(
     searchParams.get('search') || '',
   );
-  useQuery({
-    queryKey: [
-      'characters',
-      {
-        page: searchParams.get('page'),
-        search: searchParams.get('search'),
-      },
-    ],
-    queryFn: async () => {
-      const { data } = await getCharacters({
-        page: searchParams.get('page'),
-        search: searchParams.get('search'),
-      });
-      return data;
-    },
-    keepPreviousData: true,
-    refetchOnWindowFocus: false,
-    refetchOnReconnect: false,
-    retry: false,
-    staleTime: 300000,
-  });
+
   const handleSearch: React.ChangeEventHandler<HTMLInputElement> = (e) => {
     const searchString = e.target.value || '';
     if (searchString === search) {

@@ -1,8 +1,8 @@
 'use client';
 import { styled, alpha } from '@mui/material/styles';
-import { FC } from 'react';
+import { FC, PropsWithChildren } from 'react';
 
-export const Search: FC = styled('div')(({ theme }) => ({
+export const Search: FC<PropsWithChildren> = styled('div')(({ theme }) => ({
   position: 'relative',
   borderRadius: theme.shape.borderRadius,
   backgroundColor: alpha(theme.palette.common.white, 0.15),

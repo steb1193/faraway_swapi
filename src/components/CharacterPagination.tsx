@@ -1,5 +1,5 @@
 'use client';
-import { FC, useState } from 'react';
+import { FC } from 'react';
 import { useQuery } from '@tanstack/react-query';
 import * as React from 'react';
 import { getCharacters } from '@/api/getCharacters';
@@ -9,7 +9,6 @@ import { usePathname, useRouter, useSearchParams } from 'next/navigation';
 export const CharacterPagination: FC = () => {
   const searchParams = useSearchParams();
 
-  const [page, setPage] = useState(+(searchParams.get('page') || 1));
   const router = useRouter();
   const pathname = usePathname();
   const { data, isFetching } = useQuery({
@@ -19,8 +18,8 @@ export const CharacterPagination: FC = () => {
     ],
     queryFn: async () => {
       const { data } = await getCharacters({
-        page: searchParams.get('page'),
-        search: searchParams.get('search'),
+        page: searchParams.get('page') || undefined,
+        search: searchParams.get('search') || undefined,
       });
       return data;
     },
@@ -34,20 +33,20 @@ export const CharacterPagination: FC = () => {
   const onChange: (
     event: React.ChangeEvent<unknown>,
     page: number,
-  ) => void = async (e, _page) => {
-    if (+_page === +page) {
+  ) => void = async (e, page) => {
+    if (`${page}` === searchParams.get('page')) {
       return;
     }
-    setPage(_page);
     const current = new URLSearchParams(Array.from(searchParams.entries()));
-    if (!_page) {
+    if (!page) {
       current.delete('page');
     } else {
-      current.set('page', `${_page}`);
+      current.set('page', `${page}`);
     }
     const search = current.toString();
     const query = search ? `?${search}` : '';
-    router.push(`${pathname}${query}`);
+    const href = `${pathname}${query}`;
+    router.push(href);
   };
   const pageCount = data?.count ? Math.ceil(data?.count / 10) : 0;
   if (pageCount <= 1) {
@@ -57,7 +56,7 @@ export const CharacterPagination: FC = () => {
     <Pagination
       disabled={isFetching}
       count={pageCount}
-      page={+searchParams.get('page') || 1}
+      page={+(searchParams.get('page') || 1)}
       onChange={onChange}
     />
   );

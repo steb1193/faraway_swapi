@@ -3,7 +3,7 @@ import type { AxiosResponse } from 'axios';
 import { CharacterDescription } from '@/api/types';
 
 export type CharactersRequest = {
-  page?: number;
+  page?: string;
   search?: string;
 };
 
